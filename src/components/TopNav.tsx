@@ -2,7 +2,7 @@
 import React from 'react';
 import { Award, Search, Settings } from 'lucide-react';
 
-const TopNav = ({ points = 0 }) => {
+const TopNav = ({ points = 0 }: { points?: number }) => {
   return (
     <div className="md:hidden flex items-center justify-between bg-rewardly-primary text-white p-4">
       <div className="flex items-center space-x-2">

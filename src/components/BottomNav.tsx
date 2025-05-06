@@ -6,7 +6,7 @@ import { Gift, Compass, FileBarChart, Video, Award, Share2 } from 'lucide-react'
 const BottomNav = () => {
   const location = useLocation();
   
-  const isActive = (path) => {
+  const isActive = (path: string) => {
     return location.pathname === path;
   };
   
@@ -21,7 +21,14 @@ const BottomNav = () => {
   );
 };
 
-const NavItem = ({ to, icon, text, active }) => {
+interface NavItemProps {
+  to: string;
+  icon: React.ReactNode;
+  text: string;
+  active?: boolean;
+}
+
+const NavItem = ({ to, icon, text, active }: NavItemProps) => {
   return (
     <Link to={to} className="flex flex-col items-center justify-center px-2">
       <div className={`p-1 ${active ? 'text-rewardly-primary' : 'text-gray-500'}`}>
