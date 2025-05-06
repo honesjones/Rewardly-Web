@@ -55,10 +55,8 @@ const OFFERS = [
   },
 ];
 
-type Platform = 'all' | 'web' | 'ios' | 'android';
-
 const OffersPage = () => {
-  const [platform, setPlatform] = useState<Platform>('all');
+  const [platform, setPlatform] = useState('all');
   
   const filteredOffers = platform === 'all' 
     ? OFFERS 
@@ -72,7 +70,7 @@ const OffersPage = () => {
       </div>
       
       <div className="mb-6">
-        <Tabs defaultValue="all" onValueChange={(value) => setPlatform(value as Platform)}>
+        <Tabs defaultValue="all" onValueChange={(value) => setPlatform(value)}>
           <TabsList className="grid grid-cols-4 w-full max-w-md bg-rewardly-light">
             <TabsTrigger value="all" className="data-[state=active]:bg-white">
               <div className="flex items-center gap-2">
