@@ -5,7 +5,7 @@ import {
   Gift, Compass, FileBarChart, Video, Share2, Award, 
 } from 'lucide-react';
 
-const Sidebar = ({ points = 0 }: { points?: number }) => {
+const Sidebar = ({ points = 0 }) => {
   return (
     <div className="hidden md:flex flex-col h-screen bg-rewardly-primary text-white w-64 fixed left-0 top-0">
       <div className="p-4">
@@ -46,14 +46,7 @@ const Sidebar = ({ points = 0 }: { points?: number }) => {
   );
 };
 
-interface SidebarLinkProps {
-  to: string;
-  icon: React.ReactNode;
-  text: string;
-  active?: boolean;
-}
-
-const SidebarLink = ({ to, icon, text, active }: SidebarLinkProps) => {
+const SidebarLink = ({ to, icon, text, active }) => {
   return (
     <Link 
       to={to} 

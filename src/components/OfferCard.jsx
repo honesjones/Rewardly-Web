@@ -2,15 +2,7 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 
-interface OfferCardProps {
-  title: string;
-  description: string;
-  image: string;
-  points: number;
-  platform?: string;
-}
-
-const OfferCard = ({ title, description, image, points, platform }: OfferCardProps) => {
+const OfferCard = ({ title, description, image, points, platform }) => {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100">
       <div className="relative">
