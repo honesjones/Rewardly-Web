@@ -26,21 +26,21 @@ const UserPopover = () => {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <button className="flex items-center gap-3 p-4 mt-auto w-full hover:bg-rewardly-secondary transition-colors">
-          <div className="bg-white text-rewardly-primary rounded-full h-10 w-10 flex items-center justify-center font-bold">
+        <button className="flex items-center gap-3 p-4 mt-auto w-full hover:bg-gray-100 transition-colors rounded-md">
+          <div className="bg-blue-600 text-white rounded-full h-10 w-10 flex items-center justify-center font-bold">
             S
           </div>
-          <div>
+          <div className="text-left">
             <div className="font-medium">Sandro Greec</div>
-            <div className="text-sm opacity-80">Your Account</div>
+            <div className="text-sm text-gray-500">Your Account</div>
           </div>
         </button>
       </PopoverTrigger>
-      <PopoverContent className="w-72 p-0" align="start" sideOffset={0}>
+      <PopoverContent className="w-72 p-0 z-50 bg-white" align="start" sideOffset={0}>
         <div className="py-2">
           <div className="px-4 py-3 border-b border-gray-100">
             <div className="flex items-center gap-3">
-              <div className="bg-rewardly-primary text-white rounded-full h-10 w-10 flex items-center justify-center font-bold">
+              <div className="bg-blue-600 text-white rounded-full h-10 w-10 flex items-center justify-center font-bold">
                 S
               </div>
               <div>
@@ -78,7 +78,7 @@ const UserPopover = () => {
               />
               <button 
                 onClick={handleCopyReferral}
-                className="bg-rewardly-primary text-white px-4 py-2 text-sm font-medium rounded-r-md flex items-center"
+                className="bg-blue-600 text-white px-4 py-2 text-sm font-medium rounded-r-md flex items-center"
               >
                 {copied ? "Copied" : "Copy"}
                 {!copied && <Copy className="ml-1 w-3 h-3" />}
