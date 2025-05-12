@@ -2,7 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Google, Facebook } from 'lucide-react';
+import { Mail, Facebook } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 
 const LoginPage: React.FC = () => {
@@ -86,7 +86,7 @@ const LoginPage: React.FC = () => {
           className="w-full h-14 bg-white hover:bg-gray-100 text-gray-800 font-semibold rounded-md flex items-center justify-center space-x-2"
           variant="outline"
         >
-          <Google className="w-6 h-6 text-red-500" />
+          <Mail className="w-6 h-6 text-red-500" />
           <span className="text-lg">Sign in with Google</span>
         </Button>
         
