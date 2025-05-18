@@ -108,6 +108,7 @@ const OffersPage = () => {
         {filteredOffers.map((offer) => (
           <OfferCard
             key={offer.id}
+            id={offer.id}
             title={offer.title}
             description={offer.description}
             image={offer.image}
